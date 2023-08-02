@@ -21,7 +21,12 @@
     </div>
     <div class="wholeBody">
         <div class="searchSection">
-            
+            <form action="#" method="post">
+                {% csrf_token %}
+                {{ searchForm }}
+
+                <button type="submit" class="formBTN" id="searchFormSubmit">پیدا کن</button>
+            </form>
         </div>
     </div>
 </body>
