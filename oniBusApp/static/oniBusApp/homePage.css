@@ -16,9 +16,16 @@
 }
 body{
   background-color: var(--bodyColor);
+  
 }
+@font-face {
+  font-family: fontBold;
+  src: url(font/Estedad-Bold.ttf);
+}
+
 /*menu section*/
 .wholeMenu{
+  font-family: fontBold;
   width: 100vw;
   height: 5vw;
   background-color: var(--mainYellowColor);
@@ -27,6 +34,8 @@ body{
   flex-direction:row ;
   overflow: hidden;
   padding: 0.3vw 1vw;
+  justify-content: space-between;
+
 }
 .userInfo{
   width: 18%;
@@ -48,6 +57,17 @@ body{
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+.menuBTNs{
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuBTN{
+  background-color: #fff;
+  border: 1px solid blue;
+
 }
 /*usual question section*/
 .question {
