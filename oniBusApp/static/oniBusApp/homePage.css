@@ -13,6 +13,8 @@
     --secondaryYellowColor:#FDFD96;
     --mainGrayColor:#828E84;
     --secondaryGrayColor:#B2BEB5;
+    --invisible:rgba(255, 255, 255, 0);
+    --usualTransition:all 0.2s ease-in-out;
 }
 body{
   background-color: var(--bodyColor);
@@ -22,6 +24,10 @@ body{
   font-family: fontBold;
   src: url(font/Estedad-Bold.ttf);
 }
+/* color: transparent;
+	background: #000;
+	text-shadow: 1px 1px 2px rgba( 255, 255, 255, 5);
+	-webkit-background-clip: text;*/
 
 /*menu section*/
 .wholeMenu{
@@ -59,15 +65,22 @@ body{
   white-space: nowrap;
 }
 .menuBTNs{
-  background-color: red;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  width: 70%;
 }
 .menuBTN{
-  background-color: #fff;
-  border: 1px solid blue;
-
+  border: 3px solid var(--invisible);
+  font-size: 1.5vw;
+  margin-right: 2vw;
+  border-radius: 10px;
+  color: var(--bodyColor);
+  transition: var(--usualTransition);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.329);
+}
+.menuBTN:hover{
+  transition: var(--usualTransition);
+  text-shadow: 3px 5px 6px rgba(0,0,0,0.44);
 }
 /*usual question section*/
 .question {
