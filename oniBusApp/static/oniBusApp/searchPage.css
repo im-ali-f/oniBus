@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    top: 0;
+    outline: none;
+    text-decoration: none;
+    border: none;
+  }
+  :root{
+      --bodyColor : #B2BEB5;
+      --mainYellowColor:#FDFD96;
+      --secondaryYellowColor:#F8DE7E;
+      --mainGrayColor:#828E84;
+      --secondaryGrayColor:#B2BEB5;
+      --invisible:rgba(255, 255, 255, 0);
+      --usualTransition:all 0.2s ease-in-out;
+      --grayText:#565856;
+      --active:rgb(138, 107, 8);
+      --activeGreen:rgb(158, 187, 52);
+  }
+  body{
+    background-color: var(--bodyColor);
+    
+  }
+  @font-face {
+    font-family: fontBold;
+    src: url(font/Estedad-Bold.ttf);
+  }
+
+.ticketHolder{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 29fr 29fr 29fr;
+    column-gap: 1vw;
+    row-gap: 1vw;
+}
+.ticket{
+    display: inline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw;
+    background-color: var(--secondaryYellowColor);
+    border-radius: 10px;
+    border: 3px solid var(--invisible);
+    direction: rtl;
+    transition: var(--usualTransition);
+}
+.ticket:hover{
+    transition: var(--usualTransition);
+    background-color: #fff;
+}
+.busOrCompanyImgHolder{
+    background-color: #fff;
+    width: 12vw;
+    height: 12vw;
+    margin: auto;
+    margin-bottom: 1vw;
+}
+.ticketInfoP{
+    font-family: fontBold;
+    font-size: 1.3vw;
+    color: var(--mainGrayColor);
+    display: inline;
+
+}
+.engP{
+    display: inline;
+    font-family: fontBold;
+    font-size: 1.6vw;
+    
+}

@@ -13,9 +13,11 @@ def viewIndex(request):
 def viewSearch(request):
 
     data=[
-        {"ticketId":1,"origin":"qazvin","destination":"tehran","busType":"volvo","departure":"20:11","price":"210000","isActive":True},
-        {"ticketId": 2, "origin": "qazvin", "destination": "tehran", "busType": "volvo", "departure": "20:11","price": "210000", "isActive": False},
-        {"ticketId": 3, "origin": "qazvin", "destination": "tehran", "busType": "volvo", "departure": "20:11","price": "210000", "isActive": True},
+        {"ticketId":1,"origin":"qazvin","destination":"tehran","busType":"volvo","busOrCompanyImg":"","departure":"20:11","price":"210000","isActive":"active"},
+        {"ticketId": 2, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "deactive"},
+        {"ticketId": 3, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "active"},
+        {"ticketId": 4, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "active"},
+        {"ticketId": 5, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "active"},
     ]
     print(request.POST)
     context={

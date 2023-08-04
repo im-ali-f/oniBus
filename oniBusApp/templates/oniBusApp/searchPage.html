@@ -2,27 +2,28 @@
 {% load static %}
 
 {% block insideHead %}
-    <link rel="stylesheet" href="searchPage.css">
+    <link rel="stylesheet" href="{% static "oniBusApp/searchPage.css" %}">
 {% endblock %}
 
 {% block insideBody %}
 <div class="ticketHolder">
    {% for ticket in data %}
-    <div class="ticket" id="{{ticket.ticketId}}">
+    <div class="ticket {{ ticket.isActive }}" id="{{ticket.ticketId}}">
         <div class="busOrCompanyImgHolder">
-            <img class="busOrCompanyImage" src="" alt="">
+            <img class="busOrCompanyImage" src="{{ ticket.busOrCompanyImg }}" alt="">
         </div>
         <div class="ticketInfo">
-            <p class="ticketInfoP busTypeP"></p>
+            <p class="ticketInfoP busTypeP"> نوع اتوبوس :<p class="engP"> {{ ticket.busType }}</p></p>
             <div class="originDestination">
-                <p class="ticketInfoP originP"></p>
-                <p class="ticketInfoP destinationP"></p>
+                <p class="ticketInfoP originP"> مبدا : <p class="engP">{{ ticket.origin }}</p></p>
+                <p class="ticketInfoP destinationP"> مقصد :<p class="engP"> {{ ticket.destination }}</p></p>
             </div>
-            <p class="ticketInfoP departureP"></p>
-            <p class="ticketInfoP priceP"></p>
+            <p class="ticketInfoP departureP"> ساعت حرکت : <p class="engP">{{ ticket.departure }}</p> </p>
+            <p class="ticketInfoP priceP"> قیمت :<p class="engP"> {{ ticket.price }} </p> </p>
 
-            <p class="id"></p>
+            <p class="id ticketInfoP">ticketID:{{ ticket.ticketId }}</p>
         </div>
+        <button type="submit "class="ticketInfoP" value="{{ ticket.ticketId }}">همین الان بخر</button>
     </div>
    {% endfor %}
 
