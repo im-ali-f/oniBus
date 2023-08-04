@@ -9,3 +9,7 @@ def viewIndex(request):
     if request.method == "POST":
         formObj=forms.searchForm(request.POST)
     return render(request, "oniBusApp/index.html", {"searchForm":formObj})
+
+def viewSearch(request):
+    print(request.POST)
+    return render(request,"oniBusApp/searchPage.html")
