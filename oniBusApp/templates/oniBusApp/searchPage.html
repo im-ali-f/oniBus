@@ -23,9 +23,13 @@
 
             <p class="id ticketInfoP">ticketID:{{ ticket.ticketId }}</p>
         </div>
-        <button type="submit "class="ticketInfoP" value="{{ ticket.ticketId }}">همین الان بخر</button>
+        <a class="ticketInfoP ticketBTN" value="{{ ticket.ticketId }}">همین الان بخر</a>
     </div>
    {% endfor %}
 
 </div>
+{% endblock %}
+
+{% block outsideBody %}
+    <script src="{% static "oniBusApp/searchPage.js" %}"></script>
 {% endblock %}

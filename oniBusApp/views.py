@@ -17,7 +17,7 @@ def viewSearch(request):
         {"ticketId": 2, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "deactive"},
         {"ticketId": 3, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "active"},
         {"ticketId": 4, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "active"},
-        {"ticketId": 5, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "active"},
+        {"ticketId": 5, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "deactive"},
     ]
     print(request.POST)
     context={

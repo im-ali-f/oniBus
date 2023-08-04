@@ -18,6 +18,7 @@
       --grayText:#565856;
       --active:rgb(138, 107, 8);
       --activeGreen:rgb(158, 187, 52);
+      --deactive:#c0d4c4b6;
   }
   body{
     background-color: var(--bodyColor);
@@ -47,9 +48,17 @@
     direction: rtl;
     transition: var(--usualTransition);
 }
+.deactive{
+    background-color: var(--deactive);
+}
 .ticket:hover{
     transition: var(--usualTransition);
-    background-color: #fff;
+    border: 3px solid var(--mainYellowColor);
+}
+.deactive:hover{
+    transition: var(--usualTransition);
+    border: 3px solid var(--invisible);
+
 }
 .busOrCompanyImgHolder{
     background-color: #fff;
@@ -70,4 +79,35 @@
     font-family: fontBold;
     font-size: 1.6vw;
     
+}
+.id{
+    color: black;
+    font-size: 0.7vw;
+}
+.ticketBTN{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    padding: 1vw;
+    cursor: pointer;
+    transition: var(--usualTransition);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.ticketBTN:hover{
+    background-color: var(--secondaryGrayColor);
+    color: white;
+    transition: var(--usualTransition);
+}
+.deactiveBTN{
+    background-color:var(--mainGrayColor);
+    cursor: default;
+    color: white;
+}
+.deactiveBTN:hover{
+    background-color:var(--mainGrayColor);
+    cursor: default;
+    color: white;
 }
