@@ -10,11 +10,14 @@
 :root{
     --bodyColor : #B2BEB5;
     --mainYellowColor:#FDFD96;
-    --secondaryYellowColor:#FDFD96;
+    --secondaryYellowColor:#F8DE7E;
     --mainGrayColor:#828E84;
     --secondaryGrayColor:#B2BEB5;
     --invisible:rgba(255, 255, 255, 0);
     --usualTransition:all 0.2s ease-in-out;
+    --grayText:#565856;
+    --active:rgb(138, 107, 8);
+    --activeGreen:rgb(158, 187, 52);
 }
 body{
   background-color: var(--bodyColor);
@@ -31,12 +34,14 @@ body{
 
 /*menu section*/
 .wholeMenu{
-  font-family: fontBold;
-  width: 100vw;
+  font-family: fontBold, serif;
+  width: 90vw;
   height: 5vw;
+  margin: auto;
   background-color: var(--mainYellowColor);
   border-radius: 0px 0px 20px 20px;
   display: flex;
+  position: sticky;
   flex-direction:row ;
   overflow: hidden;
   padding: 0.3vw 1vw;
@@ -63,6 +68,7 @@ body{
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 1.4vw;
 }
 .menuBTNs{
   display: flex;
@@ -81,6 +87,104 @@ body{
 .menuBTN:hover{
   transition: var(--usualTransition);
   text-shadow: 3px 5px 6px rgba(0,0,0,0.44);
+}
+.logo{
+    width: 100%;
+    height: 100%;
+}
+/*search section*/
+.wholeBody{
+    width: 90%;
+    height: 10000px;
+    margin: auto;
+    padding: 3vw;
+  }
+
+.descriptionSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ourName{
+  font-family: fontBold;
+  font-size: 7vw;
+  color: transparent;
+	background: #000;
+	text-shadow: 1px 1px 2px rgba( 255, 255, 255, 5);
+	-webkit-background-clip: text;
+}
+.description{
+  font-family: fontBold;
+  font-size: 2vw;
+  color: var(--mainYellowColor);
+  direction: rtl;
+  text-align: center;
+}
+/*search section*/
+.searchSection{
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: fontBold;
+  font-size: 2vw;
+  color: transparent;
+	background: #000;
+	text-shadow: 1px 1px 2px rgba( 255, 255, 255, 5);
+	-webkit-background-clip: text;
+  margin-top: 3vw;
+}
+.searchInput{
+  font-family: fontBold;
+  font-size: 2vw;
+  color: var(--grayText);
+  border-radius: 10px;
+  background-color: var(--mainYellowColor);
+  border: 3px solid var(--invisible);
+  padding-right: 1vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 35%;
+  transition: var(--usualTransition);
+}
+.searchInput:hover{
+  border: 3px solid var(--active);
+  transition: var(--usualTransition);
+  background-color: #fff;
+}
+.searchInput:focus{
+  border: 3px solid var(--active);
+  transition: var(--usualTransition);
+  background-color: #fff;
+}
+.originDest{
+
+}
+.finalDest{
+
+}
+#searchFormSubmit{
+  width: 10%;
+  font-family: fontBold;
+  font-size: 2vw;
+  color: var(--grayText);
+  border-radius: 10px;
+  border: 3px solid var(--invisible);
+  transition: var(--usualTransition);
+  cursor: pointer;
+}
+#searchFormSubmit:hover{
+  border: 3px solid var(--activeGreen);
+  transition: var(--usualTransition);
+  color: var(--activeGreen);
+}
+#searchFormSubmit:focus{
+  border: 3px solid var(--activeGreen);
+  transition: var(--usualTransition);
+  color: var(--activeGreen);
+
 }
 /*usual question section*/
 .question {

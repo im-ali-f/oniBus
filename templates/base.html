@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oni bus</title>
+    <link rel="stylesheet" href="{% static "oniBusApp/homePage.css" %}">
+</head>
+<body>
+    <div class="wholeMenu">
+        <div class="userInfo">
+            <img class="profileImage" src="" alt="userProfileImage">
+            <p class="profileName">mrx_warrior_1381999000</p>
+        </div>
+        <div class="menuBTNs">
+            <a href="#" class="menuBTN" id="contactus">تماس با ما</a>
+            <a href="#" class="menuBTN"  id="usualQuestions">سوالات متداول</a>
+            <a href="#" class="menuBTN" id="contracts">قرارداد ها</a>
+        </div>
+        <div class="logoSection">
+            <img class="logo" src="{% static "oniBusApp/logo/logoNoback.png" %}" alt="oniBusLogo">
+        </div>
+    </div>
+    <div class="wholeBody">
+        {% block insideBody %}{% endblock insideBody %}
+    </div>
+</body>
+<script src="{% static "/oniBusApp/index.js" %}"></script>
+</html>

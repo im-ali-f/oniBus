@@ -1,27 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>oni bus</title>
-    <link rel="stylesheet" href="{% static "oniBusApp/homePage.css" %}">
-</head>
-<body>
-    <div class="wholeMenu">
-        <div class="userInfo">
-            <img class="profileImage" src="" alt="userProfileImage">
-            <p class="profileName">mrx_warrior_1381999000</p>
+{% extends 'base.html' %}
+{% block insideBody %}
+        <div class="descriptionSection">
+            <p class="ourName">Oni Bus</p>
+            <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد .</p>
         </div>
-        <div class="menuBTNs">
-            <a href="#" class="menuBTN" id="contactus">تماس با ما</a>
-            <a href="#" class="menuBTN"  id="usualQuestions">سوالات متداول</a>
-            <a href="#" class="menuBTN" id="contracts">قرارداد ها</a>
-        </div>
-        <div class="logo">
-            <img src="" alt="oniBusLogo">
-        </div>
-    </div>
-    <div class="wholeBody">
         <div class="searchSection">
             <form action="#" method="post">
                 {% csrf_token %}
@@ -49,7 +31,4 @@
                 </div>
             </div>
         </div>
-    </div>
-</body>
-<script src="{% static "/oniBusApp/index.js" %}"></script>
-</html>
+{% endblock insideBody %}
