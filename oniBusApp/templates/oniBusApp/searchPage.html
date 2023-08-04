@@ -1,3 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
-testttttttttttttttttttt
+
+{% block insideHead %}
+    <link rel="stylesheet" href="searchPage.css">
+{% endblock %}
+
+{% block insideBody %}
+<div class="ticketHolder">
+   {% for ticket in data %}
+    <div class="ticket" id="{{ticket.ticketId}}">
+        <div class="busOrCompanyImgHolder">
+            <img class="busOrCompanyImage" src="" alt="">
+        </div>
+        <div class="ticketInfo">
+            <p class="ticketInfoP busTypeP"></p>
+            <div class="originDestination">
+                <p class="ticketInfoP originP"></p>
+                <p class="ticketInfoP destinationP"></p>
+            </div>
+            <p class="ticketInfoP departureP"></p>
+            <p class="ticketInfoP priceP"></p>
+
+            <p class="id"></p>
+        </div>
+    </div>
+   {% endfor %}
+
+</div>
+{% endblock %}

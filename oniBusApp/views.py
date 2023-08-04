@@ -11,5 +11,14 @@ def viewIndex(request):
     return render(request, "oniBusApp/index.html", {"searchForm":formObj})
 
 def viewSearch(request):
+
+    data=[
+        {"ticketId":1,"origin":"qazvin","destination":"tehran","busType":"volvo","departure":"20:11","price":"210000","isActive":True},
+        {"ticketId": 2, "origin": "qazvin", "destination": "tehran", "busType": "volvo", "departure": "20:11","price": "210000", "isActive": False},
+        {"ticketId": 3, "origin": "qazvin", "destination": "tehran", "busType": "volvo", "departure": "20:11","price": "210000", "isActive": True},
+    ]
     print(request.POST)
-    return render(request,"oniBusApp/searchPage.html")
+    context={
+        "data":data
+    }
+    return render(request,"oniBusApp/searchPage.html",context)
