@@ -95,7 +95,6 @@ body{
 /*search section*/
 .wholeBody{
     width: 90%;
-    height: 10000px;
     margin: auto;
     padding: 3vw;
   }
@@ -187,37 +186,64 @@ body{
 
 }
 /*usual question section*/
+.questionHolder{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6vw;
+}
+.questionP{
+  font-family: fontBold;
+  font-size: 1.4vw;
+  color: var(--grayText);
+  direction: rtl;
+  margin-bottom: 2vw;
+}
 .question {
   background-color: #eee;
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 1vw;
   width: 100%;
-  text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.question p{
+  font-family: fontBold;
+  font-size: 1.4vw;
+  color: var(--grayText);
 }
 .active,
 .question:hover {
   background-color: #ccc;
 }
 .answear {
-    padding: 0 18px;
+    padding: 0 0.5vw;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    text-align: right;
 }
-
-.question:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+.answear p{
+  font-family: fontBold;
+  font-size: 1.1vw;
+  color: var(--grayText);
+}
+.question::before {
+    content: '\02795'; 
     font-size: 13px;
     color: #777;
-    float: right;
+    float: left;
     margin-left: 5px;
   }
   
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  .active::before {
+    content: "\2796";
   }
