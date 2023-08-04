@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>oni bus</title>
-    <link rel="stylesheet" href="{% static "oniBusApp/homePage.css" %}">
+    <link rel="stylesheet" href="{% static "oniBusApp/base.css" %}">
+    {% block insideHead %}{% endblock insideHead %}
 </head>
 <body>
     <div class="wholeMenu">
@@ -25,5 +26,5 @@
         {% block insideBody %}{% endblock insideBody %}
     </div>
 </body>
-<script src="{% static "/oniBusApp/index.js" %}"></script>
+{% block outsideBody %}{% endblock outsideBody %}
 </html>

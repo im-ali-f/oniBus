@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block insideHead %}
+    <link rel="stylesheet" href="{% static "oniBusApp/index.css" %}">
+{% endblock insideHead %}
+    
 {% block insideBody %}
         <div class="descriptionSection">
             <p class="ourName">Oni Bus</p>
@@ -57,3 +63,7 @@
             </div>
         </div>
 {% endblock insideBody %}
+
+{% block outsideBody %}
+    <script src="{% static "/oniBusApp/index.js" %}"></script>
+{% endblock outsideBody %}
