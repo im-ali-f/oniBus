@@ -9,10 +9,15 @@
 
 {% block insideBody %}
 <div class="originDestinationSection">
-    <p class="origin originFinalDestinationP">{{ origin }}</p>
+    <p class="origin originFinalDestinationP">مبدا : {{ origin }}</p>
     <i class="material-symbols-rounded">arrow_back</i>
-    <p class="finalDestination originFinalDestinationP">{{ destination }}</p>
+    <p class="finalDestination originFinalDestinationP">مقصد : {{ destination }}</p>
 </div>
+
+<div class="ticketHolderPHolder">
+    <p class="ticketHolderP">بلیط های  پیدا شده برای شما :</p>
+</div>
+
 <div class="ticketHolder">
    {% for ticket in data %}
     <div class="ticket {{ ticket.isActive }}" id="{{ticket.ticketId}}">

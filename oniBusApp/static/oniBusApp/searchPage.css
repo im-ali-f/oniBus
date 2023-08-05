@@ -28,12 +28,20 @@
     font-family: fontBold;
     src: url(font/Estedad-Bold.ttf);
   }
-
+.ticketHolderPHolder{
+    direction: rtl;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-family: fontBold;
+    font-size: 1.6vw;
+    color: var(--grayText);
+}
 .ticketHolder{
     display: grid;
     grid-template-columns: 29fr 29fr 29fr;
     column-gap: 1vw;
     row-gap: 1vw;
+    direction: rtl;
 }
 .ticket{
     display: inline;
@@ -119,6 +127,7 @@
     width: 50%;
     margin: auto;
     margin-bottom: 2vw;
+    direction: rtl;
 }
 .originFinalDestinationP{
     display: inline;
@@ -126,10 +135,12 @@
     border: 10px solid var(--mainYellowColor);
     font-family: fontBold;
     font-size: 2vw;
-    color: var(--mainGrayColor);
+    color: var(--grayText);
     padding: 1vw 3vw;
+    cursor: default;
 }
 .material-symbols-rounded{
     font-size: 4vw !important;
     color: var(--grayText);
+    cursor: default;
 }
