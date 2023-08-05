@@ -30,7 +30,6 @@
   }
 
 .ticketHolder{
-    border: 1px solid red;
     display: grid;
     grid-template-columns: 29fr 29fr 29fr;
     column-gap: 1vw;
@@ -105,9 +104,32 @@
     background-color:var(--mainGrayColor);
     cursor: default;
     color: white;
+    pointer-events: none;
 }
 .deactiveBTN:hover{
     background-color:var(--mainGrayColor);
     cursor: default;
     color: white;
+}
+.originDestinationSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2vw;
+}
+.originFinalDestinationP{
+    display: inline;
+    border-radius: 10px;
+    border: 10px solid var(--mainYellowColor);
+    font-family: fontBold;
+    font-size: 2vw;
+    color: var(--mainGrayColor);
+    padding: 1vw 3vw;
+}
+.material-symbols-rounded{
+    font-size: 4vw !important;
+    color: var(--grayText);
 }

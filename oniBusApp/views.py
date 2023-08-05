@@ -19,8 +19,11 @@ def viewSearch(request):
         {"ticketId": 4, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "active"},
         {"ticketId": 5, "origin": "qazvin", "destination": "tehran", "busType": "volvo","busOrCompanyImg":"", "departure": "20:11","price": "210000", "isActive": "deactive"},
     ]
-    print(request.POST)
+    reqData = request.POST
     context={
+        "origin":reqData["originDestination"],
+        "destination":reqData["finalDestination"],
         "data":data
     }
+    print(context)
     return render(request,"oniBusApp/searchPage.html",context)
