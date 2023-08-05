@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load jalali_tags %}
 
 {% block insideHead %}
     <link rel="stylesheet" href="{% static "oniBusApp/index.css" %}">
+    <link rel="stylesheet" href="{% static 'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css' %}">
+    <script src="{% static 'admin/js/django_jalali.min.js' %}"></script>
 {% endblock insideHead %}
     
 {% block insideBody %}

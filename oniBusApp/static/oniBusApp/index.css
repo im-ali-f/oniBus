@@ -142,7 +142,6 @@
     outline: none;
     transition: 0.4s;
     display: flex;
-    flex: row;
     justify-content: space-between;
     align-items: center;
     
