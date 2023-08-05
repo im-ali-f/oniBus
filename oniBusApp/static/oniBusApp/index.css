@@ -63,10 +63,15 @@
     font-family: fontBold;
     font-size: 2vw;
     color: transparent;
-      background: #000;
-      text-shadow: 1px 1px 2px rgba( 255, 255, 255, 5);
-      -webkit-background-clip: text;
+    background: #000;
+    text-shadow: 1px 1px 2px rgba( 255, 255, 255, 5);
+    -webkit-background-clip: text;
     margin-top: 3vw;
+  }
+  .searchForm{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
   .searchInput{
     font-family: fontBold;
@@ -79,7 +84,22 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 35%;
+    width: 25%;
+    transition: var(--usualTransition);
+  }
+  #dateDeparture{
+    font-family: fontBold;
+    font-size: 1.6vw;
+    padding: 0.3vw;
+    color: var(--grayText);
+    border-radius: 10px;
+    background-color: var(--mainYellowColor);
+    border: 3px solid var(--invisible);
+    padding-right: 1vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 15%;
     transition: var(--usualTransition);
   }
   .searchInput:hover{
@@ -88,6 +108,17 @@
     background-color: #fff;
   }
   .searchInput:focus{
+    border: 3px solid var(--active);
+    transition: var(--usualTransition);
+    background-color: #fff;
+  }
+
+  #dateDeparture:hover{
+    border: 3px solid var(--active);
+    transition: var(--usualTransition);
+    background-color: #fff;
+  }
+  #dateDeparture:focus{
     border: 3px solid var(--active);
     transition: var(--usualTransition);
     background-color: #fff;
