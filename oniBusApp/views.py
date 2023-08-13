@@ -33,3 +33,9 @@ def viewSearch(request):
     }
     print(context)
     return render(request,"oniBusApp/searchPage.html",context)
+
+
+def viewSpecific(request,ticketId):
+    #inja az db vakehsi konim eteleaat ticketo
+    return render(request,"oniBusApp/specificTicket.html")
+

@@ -35,7 +35,7 @@
 
             <p class="id ticketInfoP">ticketID:{{ ticket.ticketId }}</p>
         </div>
-        <a href="#" class="ticketInfoP ticketBTN" value="{{ ticket.ticketId }}">همین الان بخر</a>
+        <a href="{% url 'specificSearchPage' ticket.ticketId  %}" class="ticketInfoP ticketBTN" value="{{ ticket.ticketId }}">همین الان بخر</a>
     </div>
    {% endfor %}
 

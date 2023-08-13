@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    top: 0;
+    outline: none;
+    text-decoration: none;
+    border: none;
+  }
+  :root{
+      --bodyColor : #B2BEB5;
+      --mainYellowColor:#FDFD96;
+      --secondaryYellowColor:#F8DE7E;
+      --mainGrayColor:#828E84;
+      --secondaryGrayColor:#B2BEB5;
+      --invisible:rgba(255, 255, 255, 0);
+      --usualTransition:all 0.2s ease-in-out;
+      --grayText:#565856;
+      --active:rgb(138, 107, 8);
+      --activeGreen:rgb(158, 187, 52);
+      --deactive:#c0d4c4b6;
+  }
+  body{
+    background-color: var(--bodyColor);
+    
+  }
+  @font-face {
+    font-family: fontBold;
+    src: url(font/Estedad-Bold.ttf);
+  }
+.ticketHolderPHolder{
+    direction: rtl;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-family: fontBold;
+    font-size: 1.6vw;
+    color: var(--grayText);
+}
+.ticketHolder{
+    display: grid;
+    grid-template-columns: 29fr 29fr 29fr;
+    column-gap: 1vw;
+    row-gap: 1vw;
+    direction: rtl;
+}
+.ticket{
+    display: inline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw;
+    background-color: var(--secondaryYellowColor);
+    border-radius: 10px;
+    border: 3px solid var(--invisible);
+    direction: rtl;
+    transition: var(--usualTransition);
+}
+.deactive{
+    background-color: var(--deactive);
+}
+.ticket:hover{
+    transition: var(--usualTransition);
+    border: 3px solid var(--mainYellowColor);
+}
+.deactive:hover{
+    transition: var(--usualTransition);
+    border: 3px solid var(--invisible);
+
+}
+.busOrCompanyImgHolder{
+    background-color: #fff;
+    width: 12vw;
+    height: 12vw;
+    margin: auto;
+    margin-bottom: 1vw;
+}
+.ticketInfoP{
+    font-family: fontBold;
+    font-size: 1.3vw;
+    color: var(--mainGrayColor);
+    display: inline;
+
+}
+.engP{
+    display: inline;
+    font-family: fontBold;
+    font-size: 1.6vw;
+    
+}
+.id{
+    color: black;
+    font-size: 0.7vw;
+}
+.ticketBTN{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    padding: 1vw;
+    cursor: pointer;
+    transition: var(--usualTransition);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.ticketBTN:hover{
+    background-color: var(--secondaryGrayColor);
+    color: white;
+    transition: var(--usualTransition);
+}
+.deactiveBTN{
+    background-color:var(--mainGrayColor);
+    cursor: default;
+    color: white;
+    pointer-events: none;
+}
+.deactiveBTN:hover{
+    background-color:var(--mainGrayColor);
+    cursor: default;
+    color: white;
+}
+.originDestinationSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2vw;
+    direction: rtl;
+}
+.originFinalDestinationP{
+    display: inline;
+    border-radius: 10px;
+    border: 10px solid var(--mainYellowColor);
+    font-family: fontBold;
+    font-size: 2vw;
+    color: var(--grayText);
+    padding: 1vw 3vw;
+    cursor: default;
+}
+.material-symbols-rounded{
+    font-size: 4vw !important;
+    color: var(--grayText);
+    cursor: default;
+}
