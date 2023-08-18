@@ -12,7 +12,13 @@ class users(models.Model):
         return f'{self.firstname} {self.lastname}'
 
 class buss(models.Model):
-    pass
+    busType=models.CharField(null=False),
+    ownerCompanyorPersonName=models.CharField(max_length=30,null=False),
+    seatsNumber=models.IntegerField(null=False),
+    VIP=models.BooleanField(null=False),
+    isActive=models.BooleanField(null=False)
+    def __str__(self):
+        return f'bus ow={self.ownerCompanyorPersonName} seat={self.seatsNumber} VIP={self.VIP}'
 
 
 
