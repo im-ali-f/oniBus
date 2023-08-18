@@ -21,7 +21,6 @@ class buss(models.Model):
         return f'bus ow={self.ownerCompanyorPersonName} seat={self.seatsNumber} VIP={self.VIP}'
 
 
-
 class ticket(models.Model):
     ownerCompany=models.ForeignKey(users,on_delete=models.CASCADE),
     bus=models.ForeignKey(buss,null=True,on_delete=models.SET_NULL),
@@ -34,3 +33,11 @@ class ticket(models.Model):
     def __str__(self):
         return f'ow={self.ownerCompany} ori={self.origin} des={self.finalDestination}'
 
+
+class destinations(models.Model):
+    destName=models.CharField(max_length=30,null=False),
+    ticket=models.ForeignKey(ticket,on_delete=models.CASCADE)
+
+class boughtTickets(models.Model):
+    ownerUser=models.ForeignKey(users,null=True,on_delete=models.SET_NULL),
+    ticket=models.ForeignKey(ticket,null=True,on_delete=models.SET_NULL),
